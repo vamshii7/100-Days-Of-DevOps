@@ -143,6 +143,29 @@ This confirms the `ConfigMap` is mounted properly inside the container.
 
 ---
 
+## 🧠 Best Practices for Redis Deployment on Kubernetes
+
+### 🔹 ConfigMap & Secrets  
+1. **Separate configurations from code**  
+   Store environment configs in `ConfigMaps`, and credentials (like passwords) in `Secrets`.
+
+2. **Version control your manifests, but never commit secrets**  
+   Keep your YAML manifests in Git, but do not check in real credentials or access tokens.
+
+3. **Mount ConfigMaps as files when required**  
+   When the app expects configuration files (like Redis), mount the ConfigMap as a file instead of injecting values as environment variables.  
+
+---
+
+### 🔹 Container & Resource Management  
+4. **Pin image versions**  
+   Use explicit image tags (e.g., `redis:7.0-alpine`) instead of `:latest` to ensure reproducibility.
+
+5. **Always define resource requests and limits**  
+   Specify CPU and memory requests/limits to ensure proper Pod scheduling and avoid noisy-neighbour issues.  
+
+---
+
 ## 🏁 Final Thoughts
 
 Today’s session bridged the concepts of **config management** and **application deployment** in Kubernetes.  
