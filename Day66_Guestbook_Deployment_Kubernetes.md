@@ -1,6 +1,6 @@
 # 🚀 Day 67: Deploy Guestbook Application on Kubernetes
 
-Welcome to **Day 66** of the **#100DaysOfDevOps** challenge!  
+Welcome to **Day 67** of the **#100DaysOfDevOps** challenge!  
 
 <br>  
 
