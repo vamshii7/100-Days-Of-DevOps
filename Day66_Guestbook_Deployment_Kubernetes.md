@@ -1,6 +1,6 @@
 # 🚀 Day 67: Deploy Guestbook Application on Kubernetes
 
-Welcome to **Day 67** of the **#100DaysOfDevOps** challenge!  
+### Welcome to **Day 67** of the **#100DaysOfDevOps** challenge!  
 
 <br>  
 
@@ -122,9 +122,7 @@ The Guestbook application is a **multi-tier Kubernetes deployment** consisting o
 ---
 
 
-## 🔧 Backend Configuration
-
-We started by setting up **Redis Master** and **Redis Slave** deployments.
+## 🔧 Backend Configuration  
 
 ### 📄 `guestbook-backend.yaml`
 
