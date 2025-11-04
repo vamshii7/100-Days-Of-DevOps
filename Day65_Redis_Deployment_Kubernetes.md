@@ -177,5 +177,5 @@ Redis serves as an excellent use case to demonstrate how Kubernetes abstracts co
 
 <img width="1819" height="979" alt="Screenshot 2025-10-31 113438" src="https://github.com/user-attachments/assets/666cc26b-5413-4d6f-bc00-a7728be3d732" />  
 
----
+---  
 
