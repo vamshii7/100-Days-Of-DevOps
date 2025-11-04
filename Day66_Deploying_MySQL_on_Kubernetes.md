@@ -252,4 +252,4 @@ So here’s to persistence — both in storage and in learning.
 
 <img width="1849" height="947" alt="Screenshot 2025-11-01 115704" src="https://github.com/user-attachments/assets/d0c598b7-3982-44d6-b4b1-00d2308d6bb5" />
 
---- 
+---  
