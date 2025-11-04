@@ -161,4 +161,4 @@ Access the application using the KodeKloud Lab URL:
 
 **Vamshi Krishna**  
 *100 Days of DevOps - Day 64*  
-📅 *Fix Python App Deployment on Kubernetes*  
+📅 *Fix Python App Deployment on Kubernetes*    
