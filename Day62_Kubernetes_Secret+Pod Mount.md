@@ -128,6 +128,6 @@ kubectl exec -it secret-datacenter -- bash
 kubectl get secrets,pods
 ```
 
----
+--- 
 
 💡 *This task demonstrates secure configuration delivery via Kubernetes Secrets, ensuring credentials remain decoupled from application logic.*
