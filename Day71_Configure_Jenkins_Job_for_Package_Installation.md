@@ -157,7 +157,7 @@ ssh natasha@ststor01 "hostname"
 
 | Issue | Resolution |
 |--------|-------------|
-| **Permission denied (publickey)** | Ensure Jenkins’ SSH key is added to `natasha@ststor01` |
+| **Permission denied (publickey)** | Ensure SSH key is added to `natasha@ststor01` |
 | **sudo: a terminal is required** | Add the below line to `/etc/sudoers`: <br>`natasha ALL=(ALL) NOPASSWD: /usr/bin/apt, /usr/bin/yum` |
 | **Host key verification failed** | Add `-o StrictHostKeyChecking=no` to your SSH command or accept the key manually |
 | **Job succeeds but package not installed** | Check whether you’re running with correct sudo privileges or the package name is valid |
