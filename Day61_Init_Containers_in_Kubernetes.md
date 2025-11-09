@@ -1,4 +1,4 @@
-# 🚀 Kubernetes Level 3 Task: Init Containers in Kubernetes
+# 🚀 Day 61: Init Containers in Kubernetes
 
 This guide covers the **Init Container** concept in Kubernetes — containers that run **before** the main application container starts, ensuring all prerequisites are completed. They’re perfect for setup tasks like configuration initialization, permission fixes, or waiting for dependencies.
 
