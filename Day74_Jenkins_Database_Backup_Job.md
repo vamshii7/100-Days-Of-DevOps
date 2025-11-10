@@ -1,4 +1,4 @@
-# 🚀 Day 73 - Jenkins Scheduled Jobs Automation  
+# 🚀 Day 74 - Jenkins Scheduled Jobs Automation  
 <img width="613" height="1015" alt="Screenshot 2025-11-09 144202" src="https://github.com/user-attachments/assets/4b6124f9-82fa-4efd-ad84-f98a0aa348cc" />  
 
 ## 🧩 Task Objective  
