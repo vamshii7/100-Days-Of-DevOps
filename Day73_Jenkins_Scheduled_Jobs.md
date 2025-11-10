@@ -19,7 +19,7 @@ This demonstrates automating secure log transfer between servers using Jenkins, 
   - App Server 1 (user: `tony`)
   - Storage Server (user: `natasha`)
 - Apache web server installed on App Server 1 (log path: `/var/log/httpd/`).
-- Jenkins SSH plugin installed.
+- Jenkins SSH & SSH Agent plugins installed.
 - Basic understanding of SSH key-based authentication and Jenkins job configuration.
 
 ---
@@ -70,8 +70,18 @@ access_log  error_log
 
 ### 5️⃣ Install SSH Plugin in Jenkins
 - Navigate to **Manage Jenkins → Plugins → Available plugins**.
-- Search for **“SSH”** and install **SSH Plugin**.
+- Search for **“SSH”** and **SSH Agent** install.
 - Once installed, restart Jenkins (`Restart Jenkins when installation is complete`).
+
+---  
+### 🔐 Configure SSH Connection
+1. In **Build Environment**, ensure the **SSH Agent** plugin is available.
+2. Add credentials using **Manage Jenkins → Credentials → Add Credentials**:
+   - Type: **SSH Username with Private Key**
+   - ID: `thor-ssh`
+   - Username: `tony`
+   - Private Key: Use Jenkins’ generated key
+3. Save credentials.
 
 ---
 
@@ -89,17 +99,7 @@ access_log  error_log
    ➜ This triggers the job every **6 minutes**.
    <br>  
    
-   <img width="948" height="442" alt="Screenshot 2025-11-08 144746" src="https://github.com/user-attachments/assets/23181fd6-1216-47e9-b26b-d301f5b18935" />
-
-
-### 🔐 Configure SSH Connection
-1. In **Build Environment**, ensure the **SSH Agent** plugin is available.
-2. Add credentials using **Manage Jenkins → Credentials → Add Credentials**:
-   - Type: **SSH Username with Private Key**
-   - ID: `thor-ssh`
-   - Username: `tony`
-   - Private Key: Use Jenkins’ generated key
-3. Save credentials.
+   <img width="948" height="442" alt="Screenshot 2025-11-08 144746" src="https://github.com/user-attachments/assets/23181fd6-1216-47e9-b26b-d301f5b18935" />  
 
 ### 🧾 Add Build Step
 In the **Build** section:
@@ -112,7 +112,7 @@ In the **Build** section:
   <img width="825" height="492" alt="Screenshot 2025-11-08 144733" src="https://github.com/user-attachments/assets/154f7aa3-1972-4aae-9fa8-1b3c6e9d38a3" />  
 
 
-### 💾 Save and Apply Configuration
+### 💾 Save and Apply Configuration  
 
 ---
 
