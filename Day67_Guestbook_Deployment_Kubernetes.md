@@ -1,4 +1,5 @@
-# 🚀 Day 67: Deploy Guestbook Application on Kubernetes
+# 🚀 Kubernetes Level 4 Task
+# Day 67: Deploy Guestbook Application on Kubernetes
 
 ### Welcome to **Day 67** of the **#100DaysOfDevOps** challenge!  
 
@@ -10,18 +11,6 @@
 
 - Today’s task was to deploy a **multi-tier Guestbook web application** on **Kubernetes** using **Redis** as the backend and a **PHP frontend**.   
 - This app allows users to enter messages that are stored and displayed using a Redis database backend.  
-
----
-
-## 📘 Table of Contents
-1. [💡 Introduction](#-introduction)
-2. [🖼️ Architecture diagram description](#-architecture-overview)
-3. [🏗️ Backend Configuration](#-backend-configuration)
-4. [🎨 Frontend Configuration](#-frontend-configuration)
-5. [✅ Verification](#-verification)
-6. [💡 Key Learnings](#-key-learnings)
-7. [🧭 Best Practices](#-best-practices)
-8. [🎯 Final Thoughts](#-final-thoughts)
 
 ---
 
@@ -43,26 +32,10 @@
 
 ---
 
-## 🏗️ Architecture Overview
+## 🏗️ Architecture Diagram
 
-```
-          +-------------------+
-          |  Guestbook UI     |
-          |  (Frontend Pods)  |
-          +---------+---------+
-                    |
-                    ↓
-          +-------------------+
-          |  Redis Slaves     |
-          | (Read Operations) |
-          +---------+---------+
-                    |
-                    ↓
-          +-------------------+
-          |  Redis Master     |
-          | (Write Operations)|
-          +-------------------+
-```
+<img width="1562" height="629" alt="image" src="https://github.com/user-attachments/assets/a5c117c0-e30c-4bdb-8e4e-ec54d0b7dc4e" />  
+
 
 This architecture ensures better performance and separation of read/write operations.
 
