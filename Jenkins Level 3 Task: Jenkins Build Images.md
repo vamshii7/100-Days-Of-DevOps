@@ -83,8 +83,43 @@ pipeline {
 ---
 
 ## ✅ Outcome
+
 - Docker image built and pushed successfully.
 - Pipeline executed on App Server 2 (stapp02).
 - Gitea integration and registry authentication confirmed.
+
+---
+
+## 🧠 Key Learnings
+
+- Declarative pipelines help simplify CI/CD logic and make workflows reproducible across environments.
+- Agent labels ensure that builds run on the correct infrastructure, improving resource isolation and control.
+- Credential management is essential for security. Secrets should be stored in Jenkins credentials, not hardcoded.
+- Minimal base images like `alpine` reduce image size, improve security posture, and speed up build times.
+- Digest-based tagging using `sha256` provides immutability and traceability for pushed Docker images.
+
+---
+
+## 🛡️ Best Practices
+
+- Use multi-stage Docker builds to separate build and runtime layers for cleaner, smaller images.
+- Pin base images to specific versions or digests to avoid unexpected changes in future builds.
+- Enable Docker layer caching to accelerate rebuilds during iterative development.
+- Configure webhook triggers or polling to automate builds on Git commits.
+- Validate Dockerfile syntax and lint before pushing to the registry.
+- Monitor image sizes and registry pushes to prevent bloated containers and storage issues.
+
+---
+
+## 🧩 Troubleshooting
+
+- If `docker push` fails, verify registry login status and ensure the registry is reachable from the agent.
+- If Git checkout fails, confirm credentials, repository URL, and network access from the agent to Gitea.
+
+---
+
+## 🎯 Final Thoughts
+
+This pipeline provides a solid foundation for containerized CI/CD workflows. By combining Git, Docker, and Jenkins with secure practices, you create a reproducible and scalable system. Continue to iterate by adding testing, deployment automation, and observability to evolve it into a production-grade pipeline.
 
 ---
