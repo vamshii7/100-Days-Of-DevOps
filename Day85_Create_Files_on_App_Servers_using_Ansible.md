@@ -15,7 +15,7 @@ This task demonstrates how automation eliminates repetitive server-by-server act
 
 ---
 
-# 📌 **Task Summary**
+## 📌 **Task Summary**
 
 The objective for today:
 
@@ -29,7 +29,7 @@ ansible-playbook -i inventory playbook.yml
 
 ---
 
-# 🗂 **Step 1: Generate SSH Keys & Copy to All App Servers**
+## 🗂 **Step 1: Generate SSH Keys & Copy to All App Servers**
 
 ```bash
 ssh-keygen
@@ -40,7 +40,7 @@ ssh-copy-id banner@stapp03
 
 ---
 
-# 🗂 **Step 2: Create the Inventory File**
+## 🗂 **Step 2: Create the Inventory File**
 
 📄 **File:** `~/playbook/inventory`
 
@@ -53,7 +53,7 @@ stapp03 ansible_host=172.16.238.12 ansible_user=banner ansible_ssh_private_key_f
 
 ---
 
-# 📝 **Step 3: Create the Playbook**
+## 📝 **Step 3: Create the Playbook**
 
 📄 **File:** `~/playbook/playbook.yml`
 
@@ -90,9 +90,17 @@ stapp03 ansible_host=172.16.238.12 ansible_user=banner ansible_ssh_private_key_f
       when: inventory_hostname == "stapp03"
 ```
 
+## 🔎 Explanation
+
+- `file module` → creates or modifies files.
+- `state: touch` → ensures the file exists (creates if missing).
+- `mode: '0744'` → sets permissions (owner: read/write/execute, group: read, others: read).
+- `owner / group` → sets file ownership.
+- `when condition` → applies the correct owner/group depending on which app server the play is running on.  
+
 ---
 
-# 🔍 **Step 4: Verify Connectivity**
+## 🔍 **Step 4: Verify Connectivity**
 
 ```bash
 ansible -i ~/playbook/inventory all -m ping
@@ -103,10 +111,10 @@ ansible -i ~/playbook/inventory all -m ping
 
 ---
 
-# ▶️ **Step 5: Run the Playbook**
+## ▶️ **Step 5: Run the Playbook**
 
 ```bash
-ansible-playbook -i inventory playbook.yml
+ansible-playbook -i /home/thor/ansible/inventory ~/playbook/playbook.yml
 ```
 
 <img width="918" height="551" alt="Screenshot 2025-11-25 144510" src="https://github.com/user-attachments/assets/f6499cf3-5e6f-438c-a2ef-50fb378324aa" />
@@ -114,7 +122,7 @@ ansible-playbook -i inventory playbook.yml
 
 ---
 
-# 🔎 **Step 6: Verify File on Each Server**
+## 🔎 **Step 6: Verify File on Each Server**
 
 ```bash
 ssh tony@stapp01 ls -l /home/app.txt
@@ -127,7 +135,7 @@ ssh banner@stapp03 ls -l /home/app.txt
 
 ---
 
-# 🧠 **Key Learnings**
+## 🧠 **Key Learnings**
 
 ### 🔹 1. Conditional tasks offer fine-grained control  
 Using `when:` ensures each host receives the correct owner and group.
@@ -143,7 +151,7 @@ It ensures automation runs smoothly without interactive authentication blocks.
 
 ---
 
-# 💡 **Best Practices**
+## 💡 **Best Practices**
 
 ✨ Use descriptive task names  
 ✨ Keep playbooks idempotent  
@@ -153,7 +161,7 @@ It ensures automation runs smoothly without interactive authentication blocks.
 
 ---
 
-# 🎯 **Closing Thoughts**
+## 🎯 **Closing Thoughts**
 
 Day 85 reinforces a powerful truth about DevOps:
 
@@ -163,7 +171,7 @@ Simple file creation can quickly become complex at scale - but Ansible ensures c
 
 ---
 
-# 👨‍💻 Author  
+## 👨‍💻 Author  
 **Vamshi Krishna**  
 [Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  
 Passionate about DevOps, infrastructure automation, CI/CD, cloud, and SRE practices.  
