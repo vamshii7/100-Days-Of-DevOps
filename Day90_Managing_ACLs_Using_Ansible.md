@@ -114,6 +114,15 @@ Create the file:
         state: present
 ```
 
+### 🔎 Explanation
+- `file module` with state: touch → creates an empty file if it doesn’t exist.
+- `acl module` (from ansible.posix collection) → manages Access Control Lists.
+    - `entity` → the user or group name.
+    - `etype` → user or group.
+    - `permissions` → r, rw, etc.
+    - `state`: present → ensures the ACL entry exists.
+---
+
 ## 📡 Connectivity Check  
 
 ```bash
@@ -174,5 +183,9 @@ thor@jumphost ~$
 - **Always test connectivity before running playbooks:** A simple ansible -m ping saves time and helps detect SSH issues early.
 
 ---
+
+### Official Ansible Documentation Links:
+  - [File Module](https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/file_module.html)
+  - [ACL Module](https://docs.ansible.com/projects/ansible/latest/collections/ansible/posix/acl_module.html)
 
 >ACL management is a crucial skill for Linux-based deployments, and automating it with Ansible takes you one step closer to mastering infra-as-code.
