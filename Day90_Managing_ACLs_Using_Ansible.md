@@ -188,4 +188,14 @@ thor@jumphost ~$
   - [File Module](https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/file_module.html)
   - [ACL Module](https://docs.ansible.com/projects/ansible/latest/collections/ansible/posix/acl_module.html)
 
->ACL management is a crucial skill for Linux-based deployments, and automating it with Ansible takes you one step closer to mastering infra-as-code.
+>ACL management is a crucial skill for Linux-based deployments, and automating it with Ansible takes you one step closer to mastering infra-as-code.  
+>Another successful automation task completed in the #100DaysOfDevOps journey! 🚀
+
+---
+
+## 👨‍💻 Author  
+**Vamshi Krishna**  
+DevOps Engineer | DevOps & Kubernetes Enthusiast  
+[Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  
+> ⚙️ _Feel free to fork and contribute — PRs are welcome!_
+---
