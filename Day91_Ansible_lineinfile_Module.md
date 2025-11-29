@@ -192,3 +192,13 @@ Expected output:
 ------------------------------------------------------------------------
 
 > Day 91 reinforces that automation isn't just about deploying services **it's about enforcing consistency, eliminating drift, and managing configuration intelligently.**
+>Another successful automation task completed in the #100DaysOfDevOps journey! 🚀
+
+---
+
+## 👨‍💻 Author  
+**Vamshi Krishna**  
+DevOps Engineer | DevOps & Kubernetes Enthusiast  
+[Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  
+> ⚙️ _Feel free to fork and contribute — PRs are welcome!_
+---
