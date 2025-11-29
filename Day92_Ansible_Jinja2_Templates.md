@@ -142,8 +142,7 @@ curl stapp01
 
 ## 📚 Official Documentation
 
--   https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html\
--   https://jinja.palletsprojects.com
+-   [Ansible Tamplating(Jinja2)](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_templating.html#jinja2-example)
 
 ------------------------------------------------------------------------
 
