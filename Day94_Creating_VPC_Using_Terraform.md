@@ -1,7 +1,9 @@
 # 🚀 Day 94: Creating a VPC Using Terraform
 
-
+<div align=center>
 <img width="664" height="587" alt="Screenshot 2025-11-30 102919" src="https://github.com/user-attachments/assets/b49e1361-969d-4f54-8783-759e6ba3e5f6" />
+</div>
+
 <br>
 
 Today’s task focused on learning how to create a VPC (Virtual Private Cloud) in AWS using Terraform. This is one of the foundational steps when working with Infrastructure as Code (IaC), and it helps beginners understand how cloud infrastructure can be provisioned automatically.
@@ -101,7 +103,7 @@ terraform apply -auto-approve
 
 ---
 
-## 🧠 Key Learnings (Beginner Edition)
+## 🧠 Key Learnings
 
 - Terraform makes infrastructure reproducible and automated
 - The .tf file is readable and easy for beginners
