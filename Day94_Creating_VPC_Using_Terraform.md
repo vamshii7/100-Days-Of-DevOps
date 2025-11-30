@@ -1,6 +1,7 @@
+<div align=center>
+  
 # 🚀 Day 94: Creating a VPC Using Terraform
 
-<div align=center>
 <img width="664" height="587" alt="Screenshot 2025-11-30 102919" src="https://github.com/user-attachments/assets/b49e1361-969d-4f54-8783-759e6ba3e5f6" />
 </div>
 
