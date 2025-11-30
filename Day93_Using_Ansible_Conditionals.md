@@ -177,3 +177,9 @@ A single playbook can handle three different servers intelligently using just a 
 
 ---
 
+## 👨‍💻 Author  
+**Vamshi Krishna**  
+DevOps Engineer | DevOps & Kubernetes Enthusiast  
+[Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  
+> ⚙️ _Feel free to fork and contribute — PRs are welcome!_
+---
