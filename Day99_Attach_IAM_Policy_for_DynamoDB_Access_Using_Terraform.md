@@ -8,6 +8,10 @@ principle of least privilege.
 ------------------------------------------------------------------------
 
 ## 🚀 **Task Overview**
+<div align=center>
+<img width="824" height="1167" alt="Screenshot 2025-12-04 131855" src="https://github.com/user-attachments/assets/ad745392-d80d-4871-87a5-4617d9877091" />
+</div>
+<br>
 
 You are required to:
 
@@ -194,27 +198,97 @@ Terraform ensures consistent provisioning across environments.
 
 ------------------------------------------------------------------------
 
-# ⚠️ **Common Issues & Troubleshooting**
+# 🛠️ Terraform Commands to Apply the Configuration
 
-  -----------------------------------------------------------------------------------------
-  Issue                       Cause                      Fix
-  --------------------------- -------------------------- ----------------------------------
-  `MalformedPolicyDocument`   JSON formatting errors     Use `jsonencode()`
+Once all files are created inside your working directory
+(`/home/bob/terraform`), run the following commands in sequence:
 
-  IAM role not assumable      Wrong AWS service in       Ensure
-                              principal                  `"Service": "ec2.amazonaws.com"`
+``` bash
+terraform init
+```
 
-  `AccessDeniedException`     Missing actions in policy  Add `GetItem`, `Scan`, `Query`
+Initializes the working directory, downloads AWS provider plugins.
 
-  Terraform doesn't detect    State mismatch             Run `terraform refresh`
-  changes                                                
+``` bash
+terraform fmt
+```
 
-  Table creation failure      Duplicate table names      Update `KKE_TABLE_NAME`
-  -----------------------------------------------------------------------------------------
+Formats the Terraform files to follow best practices and styling
+conventions.
+
+``` bash
+terraform validate
+```
+
+Validates the configuration syntax and structure.
+
+``` bash
+terraform plan
+```
+
+Shows the planned resource creation without applying changes.
+
+``` bash
+terraform apply -auto-approve
+```
+
+Applies the configuration and provisions the AWS resources.
 
 ------------------------------------------------------------------------
 
-# 🎉 **Final Thoughts & Achievement**
+## 📸 Execution Output 
+
+<img width="1188" height="459" alt="Screenshot 2025-12-04 131910" src="https://github.com/user-attachments/assets/91ed9f3c-59d0-406e-b5ef-4a03e259cd71" />
+<img width="1207" height="208" alt="Screenshot 2025-12-04 132008" src="https://github.com/user-attachments/assets/2810907f-1e0f-4f89-bc9b-79b39a99c876" />
+
+
+------------------------------------------------------------------------
+
+# 🧠 Key Learnings
+
+-   IAM Least Privilege: Only the required `GetItem`, `Scan`, and
+    `Query` permissions were granted.
+-   Resource Scoping: Permissions target a specific DynamoDB table ARN.
+-   Infrastructure as Code: Terraform enables reproducible and
+    version-controlled deployments.
+-   Separation of Concerns: Logical separation between variables,
+    outputs, and main configuration files.
+-   jsonencode(): Ensures IAM policy JSON is valid and avoids formatting
+    issues.
+-   Zero-Downtime Changes: `terraform plan` ensures safe execution
+    before applying.
+
+------------------------------------------------------------------------
+
+# 🌟 Best Practices Followed
+
+-   Use of PAY_PER_REQUEST for DynamoDB to reduce costs.
+-   Ensured clean Terraform state with `terraform plan` showing no
+    pending changes.
+-   IAM Role trust policy restricted to EC2 service.
+-   Modular IAM policy attachment for maintainability.
+-   Clear variable naming strategy.
+-   Output variables expose essential resource details.
+-   terraform.tfvars used to externalize environment-specific values.
+
+------------------------------------------------------------------------
+
+
+# ⚠️ **Common Issues & Troubleshooting**  
+
+
+| Issue                     | Cause                        | Fix                                |
+|----------------------------|------------------------------|-------------------------------------|
+| `MalformedPolicyDocument`  | JSON formatting errors       | Use `jsonencode()`                  |
+| IAM role not assumable     | Wrong AWS service in principal | Ensure `"Service": "ec2.amazonaws.com"` |
+| `AccessDeniedException`    | Missing actions in policy    | Add `GetItem`, `Scan`, `Query`      |
+| Terraform doesn't detect changes | State mismatch             | Run `terraform refresh`             |
+| Table creation failure     | Duplicate table names        | Update `KKE_TABLE_NAME`             |
+
+
+------------------------------------------------------------------------
+
+# 🎉 **Final Thoughts**
 
 Today's task reinforces core DevOps & cloud fundamentals:
 
@@ -224,12 +298,15 @@ Today's task reinforces core DevOps & cloud fundamentals:
 -   Managing AWS DynamoDB using automation ⚡\
 -   Building production‑grade infra with version control readiness 📁
 
-You've successfully automated secure DynamoDB access with Terraform ---
+You've successfully automated secure DynamoDB access with Terraform
 a **high‑value real‑world DevOps skill**.
 
-Keep going! 🚀
+---
 
-------------------------------------------------------------------------
+## 👨‍💻 Author  
+**Vamshi Krishna**  
+DevOps Engineer | DevOps & Kubernetes Enthusiast  
+[Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  
+> ⚙️ _Feel free to fork and contribute — PRs are welcome!_
+---
 
-**Created for GitHub --
-Day99_Attach_IAM_Policy_for_DynamoDB_Access_Using_Terraform.md**
